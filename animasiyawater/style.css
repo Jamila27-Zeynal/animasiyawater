@@ -1,0 +1,44 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+  }
+  .content{
+    position: relative;
+
+  }
+  .content h2{
+    position: absolute;
+    color: #fff;
+    transform: translate(-50%,-50%);
+    font-size: 8em;
+  }
+  .content h2:nth-child(1){
+    /*transparent w3school..*/
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+  }
+
+  .content h2:nth-child(2){
+    color: #03a9f4 ;
+    animation: animate 4s ease-in-out infinite;
+  }
+
+  /*..Css clip-path maker-Bennett Feely..Custom polygon*/
+
+  @keyframes animate{
+    0%,100%{
+        clip-path: polygon(1% 45%, 12% 42%, 23% 53%, 32% 56%, 42% 60%, 57% 61%, 74% 58%, 83% 53%, 89% 50%, 92% 48%, 99% 40%, 99% 100%, 2% 100%);
+    }
+    50%{
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+  }
